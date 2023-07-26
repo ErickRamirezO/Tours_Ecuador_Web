@@ -33,4 +33,5 @@ ANIMACIONES
 
 OTROS
 1) Mensaje personalizado para cotizar y para reservar
-2) En el inicio el navbar debe ser sticky mientras que en las otras paginas no 
+2) En el inicio el navbar debe ser sticky mientras que en las otras paginas no
+3) Incluir dark mode
