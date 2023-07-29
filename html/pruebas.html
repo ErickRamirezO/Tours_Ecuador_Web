@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tours Ecuador</title>
+	<link rel="stylesheet" href="css/estilo.css" type="text/css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+		integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<style>
+		.titulo_destino {
+			display: flex;
+			flex-direction: row;
+			gap: 25px;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.imagen_a {
+			z-index: 3;
+		}
+
+		.titulo {
+			z-index: 2;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="titulo_destino">
+		<img src="../img/avion.png" class="imagen_a" style="width: 15%;">
+		<h1 class="titulo">Titulo del destino</h1>
+	</div>
+</body>
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		var textWrapper = document.querySelector('.titulo');
+		textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+		anime({
+			targets: '.imagen_a',
+			opacity: [0.5, 1],
+			translateX: [-100, 600],
+			easing: "easeOutExpo",
+			duration: 2700
+		});
+		anime({
+			targets: '.letter',
+			opacity: [0, 1],
+			easing: "easeOutExpo",
+			duration: 600,
+			offset: '-=775',
+			delay: (el, i) => 34 * (i + 1)
+		});
+	});
+</script>
+
+</html>
