@@ -1,7 +1,121 @@
-/*Formatear estilos*/
+.imagenes-portada {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  padding-left: 10%;
+  padding-right: 10%;
+}
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+.imagenes-portada-primero,
+.imagenes-portada-segunda {
+  width: 48%;
+  height: 98%;
+  margin: auto;
+
+}
+
+.imagenes-portada-segunda div {
+  width: 100%;
+  height: 50%;
+  margin: auto;
+}
+
+.imagenes-portada-primero img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.imagenes-portada-segunda img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.imagenes-portada img {
+  transform: scale(1);
+  transition: transform 0.7s;
+}
+
+.imagenes-portada img:hover {
+  transform: scale(1.02);
+  transition: transform 0.7s;
+}
+
+.portada-pri {
+  display: flex;
+}
+
+.portada-pri div {
+  width: 48%;
+  height: 98%;
+  margin: auto;
+}
+
+.contenedor-informacion {
+  width: 100%;
+  height: 1000px;
+
+  display: flex;
+}
+
+.linea-tiempo {
+  width: 75%;
+  height: 100%;
+  background-color: beige;
+}
+
+.reservas {
+  width: 25%;
+  height: 100%;
+  padding-top: 5%;
+}
+
+.reservas-primero {
+  width: 96%;
+  height: 50%;
+  margin-left: 1%;
+  padding-top: 2%;
+  background-color: transparent;
+  border-radius: 30px;
+  position: sticky;
+  top: 15%;
+  border: 1px solid black;
+}
+
+.reservas-primero>div {
+  width: 90%;
+  height: 13%;
+  margin: auto;
+  margin-top: 3%;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+
+.contacto-reserva {
+  display: flex;
+}
+
+.contacto-reserva .reserva-primero {
+  width: 80%;
+  height: 100%;
+}
+
+.contacto-reserva .reserva-logo {
+  width: 20%;
+  height: 100%;
+  padding-top: 5%;
+  padding-left: 5%;
+}
+
+
+
+.reservas-primero #reserva {
+
+  background-color: #01A2CC;
+}
+
+.reservas-primero #privado {
+
+  background-color: #00BD35;
 }

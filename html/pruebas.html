@@ -2,59 +2,135 @@
 <html lang="es">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Tours Ecuador</title>
-	<link rel="stylesheet" href="css/estilo.css" type="text/css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
-		integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tours Ecuador</title>
+  <link rel="stylesheet" href="../css/estilo_index.css" type="text/css">
+  <link rel="stylesheet" href="../css/estilo.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+    integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-	<style>
-		.titulo_destino {
-			display: flex;
-			flex-direction: row;
-			gap: 25px;
-			justify-content: center;
-			align-items: center;
-		}
+  <style>
+    .titulo_destino {
+      display: flex;
+      flex-direction: row;
+      gap: 25px;
+      justify-content: center;
+      align-items: center;
+    }
 
-		.imagen_a {
-			z-index: 3;
-		}
+    .imagen_a {
+      z-index: 3;
+    }
 
-		.titulo {
-			z-index: 2;
-		}
-	</style>
+    .titulo {
+      z-index: 2;
+    }
+  </style>
 </head>
 
 <body>
-	<div class="titulo_destino">
-		<img src="../img/avion.png" class="imagen_a" style="width: 15%;">
-		<h1 class="titulo">Titulo del destino</h1>
-	</div>
+  <div class="principal">
+    <div class="cabecera">
+      <div class="logo">
+        <a href="index.html">
+          <img src="../img/logoToursEcuador.png"></a>
+      </div>
+      <div class="menu">
+        <div id="inicio">
+          <p>Inicio</p>
+        </div>
+        <div id="tours">
+          <p>Tours <i class="fa-solid fa-chevron-down"></i></p>
+        </div>
+        <div id="acerca">
+          <p>Acerca de nosotros <i class="fa-solid fa-chevron-down"></i></p>
+        </div>
+        <div id="contacto">
+          <p>Contacto</p>
+        </div>
+        <div id="traduccion">
+          <p>ES <i class="fa-solid fa-chevron-down"></i></p>
+        </div>
+      </div>
+    </div>
+    <div class="titulo_destino">
+      <img src="../img/avion.png" class="imagen_a" style="width: 15%;">
+      <h1 class="titulo">Titulo del destino</h1>
+    </div>
+    <div class="imagenes-portada">
+      <div class="imagenes-portada-primero">
+        <img src="../img/dos.jpg">
+
+        <!--Slider-->
+      </div>
+      <div class=" imagenes-portada-segunda">
+        <div class="portada-pri">
+          <div class="portada-primera1"><img src="../img/dos.jpg"></div>
+          <div class="portada-primera1"><img src="../img/dos.jpg"></div>
+        </div>
+        <div class="portada-pri">
+          <div class="portada-primera1"><img src="../img/dos.jpg"></div>
+          <div class="portada-primera1"><img src="../img/dos.jpg"></div>
+        </div>
+
+      </div>
+
+
+    </div>
+    <div class="contenedor-informacion">
+      <div class="linea-tiempo"></div>
+      <div class="reservas">
+        <div class="reservas-primero">
+          <div id="dias"></div>
+          <div id="noches"></div>
+          <div id="destino"></div>
+          <div id="alimentacion"></div>
+          <div class="contacto-reserva" id="reserva">
+            <div class="reserva-primero"></div>
+            <div class="reserva-logo"><i class="fa-brands fa-whatsapp fa-2xl"></i></div>
+          </div>
+          <div class="contacto-reserva" id="privado">
+            <div class="reserva-primero"></div>
+            <div class="reserva-logo"> <i class="fa-brands fa-whatsapp fa-2xl"></i></div>
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <div class="pie">
+
+    </div>
+  </div>
 </body>
 <script>
-	document.addEventListener("DOMContentLoaded", function () {
-		var textWrapper = document.querySelector('.titulo');
-		textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
-		anime({
-			targets: '.imagen_a',
-			opacity: [0.5, 1],
-			translateX: [-100, 600],
-			easing: "easeOutExpo",
-			duration: 2700
-		});
-		anime({
-			targets: '.letter',
-			opacity: [0, 1],
-			easing: "easeOutExpo",
-			duration: 600,
-			offset: '-=775',
-			delay: (el, i) => 34 * (i + 1)
-		});
-	});
+  document.addEventListener("DOMContentLoaded", function () {
+    var textWrapper = document.querySelector('.titulo');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+    anime({
+      targets: '.imagen_a',
+      opacity: [0.5, 1],
+      translateX: [-100, 600],
+      easing: "easeOutExpo",
+      duration: 2700
+    });
+    anime({
+      targets: '.letter',
+      opacity: [0, 1],
+      easing: "easeOutExpo",
+      duration: 600,
+      offset: '-=775',
+      delay: (el, i) => 34 * (i + 1)
+    });
+  });
 </script>
 
 </html>
