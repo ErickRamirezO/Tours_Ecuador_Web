@@ -18,6 +18,9 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 	<link href="
 https://cdn.jsdelivr.net/npm/@ciar4n/izmir@1.0.1/izmir.min.css
 " rel="stylesheet">
+	<script src="
+https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js
+"></script>
 </head>
 
 <body>
@@ -48,7 +51,9 @@ https://cdn.jsdelivr.net/npm/@ciar4n/izmir@1.0.1/izmir.min.css
 		<div class="portada">
 			<div class="encabezado">
 				<img src="img/FotoJet.jpg">
-				<div class="text-overlay">Vive y viaja mientras puedas</div>
+				<div class="text-overlay">
+					Vive y viaja mientras puedas
+				</div>
 			</div>
 			<div class="indexportada">
 				<div id="primera-portada">
@@ -237,18 +242,9 @@ https://cdn.jsdelivr.net/npm/@ciar4n/izmir@1.0.1/izmir.min.css
 			</div>
 		</footer>
 	</div>
-	<!--Slider-->
-	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			var splide = new Splide('.splide', {
-				perPage: 3,
-				focus: 0,
-				omitEnd: true,
-			});
 
-			splide.mount();
-		});
-	</script>
+	<script src="js/slider.js"></script>
+	<script src="js/index.js"></script>
 </body>
 
 </html>

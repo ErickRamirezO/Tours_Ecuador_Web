@@ -73,7 +73,7 @@ body {
 	font-weight: bold;
 }
 
-.menu div:hover {
+.menu div:nth-child(-n+4):hover {
 	border-radius: 15px;
 	background-color: rgba(1, 162, 204, 0.18);
 	cursor: pointer;
@@ -93,26 +93,15 @@ body {
 	transition: color 0.7s ease;
 }
 
-.menu #acerca .fa-chevron-up{
-  transform: rotate(0deg);
+.menu #acerca .fa-chevron-up, .menu #traduccion .fa-chevron-up{
+	transform: rotate(0deg);
 	transition: transform 0.7s ease;
 }
 
-.menu #acerca:hover .fa-chevron-up {
-  transform: rotate(180deg);
+.menu #acerca:hover .fa-chevron-up, .menu #traduccion:hover .fa-chevron-up {
+	transform: rotate(180deg);
 	transition: transform 0.7s ease;
 }
-
-.menu #traduccion .fa-chevron-up {
-  transform: rotate(0deg);
-	transition: transform 0.7s ease;
-}
-
-.menu #traduccion:hover .fa-chevron-up {
-  transform: rotate(180deg);
-	transition: transform 0.7s ease;
-}
-
 
 /********************/
 /*Portada e imagenes*/
@@ -143,9 +132,9 @@ body {
 	display: block;
 }
 
-.text-overlay {
+.text-overlay{
 	position: absolute;
-	top: 40%;
+	top: 0%;
 	/* Ajusta la posición vertical del texto */
 	left: 50%;
 	/* Ajusta la posición horizontal del texto */
@@ -192,7 +181,7 @@ body {
 	position: static;
 	display: flex;
 	flex-direction: column;
-	gap:10px;
+	gap: 10px;
 }
 
 /*CONTROLAR EN DISPOSITIVOS PEQUEÑOS*/
