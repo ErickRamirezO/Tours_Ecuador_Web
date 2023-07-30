@@ -1,0 +1,104 @@
+.portada-tours {
+  width: 100%;
+  height: 600px;
+  top: 0;
+
+}
+
+.cabecera-tours {
+  position: static;
+}
+
+
+
+.portada-tours-primero {
+  width: 100%;
+  height: 100%;
+  background: url('../img/uno.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 10%;
+
+
+}
+
+.portada-tours-primero p {
+  font-size: 100px;
+
+  text-align: center;
+}
+
+.informacion-tours {
+  width: 100%;
+  height: 900px;
+}
+
+.informacion-tours>div {
+  width: 100%;
+  height: 48%;
+  margin-top: 1%;
+  display: flex;
+
+}
+
+.informacion-tours .informacion-pri,
+.informacion-seg,
+.informacion-ter,
+.informacion-cuar {
+  width: 20%;
+  height: 100%;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 40px;
+}
+
+.primero {
+  background-color: pink;
+}
+
+.segundo {
+  display: none;
+  background-color: blue;
+}
+
+.tercero {
+  background-color: yellow;
+  display: none;
+}
+
+.paginacion {
+  width: 100%;
+  height: 100px;
+}
+
+.paginacion div {
+
+  padding-top: 1%;
+  width: 20%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+
+}
+
+.paginacion-principal div p {
+  text-align: center;
+  margin: auto;
+  font-size: 40px;
+}
+
+.paginacion-principal div {
+  width: 30%;
+  height: 100%;
+  background-color: rgba(1, 162, 204, 0.4);
+  border-radius: 15px;
+  margin: auto;
+}
+
+.paginacion-principal div:hover {
+  background-color: rgba(1, 162, 204, 0.18);
+  cursor: pointer;
+  color: #0087a8;
+  transition: background-color, color, border-radius 0.7s ease;
+}

@@ -16,7 +16,8 @@ body {
 /*****CABECERA*******/
 .cabecera {
 	width: 100%;
-	background-color: rgba(255, 255, 255, 0.7);
+	background-color: rgba(255, 255, 255, 0.6);
+	backdrop-filter: blur(20px);
 	display: flex;
 	position: -webkit-sticky;
 	/* Safari */
