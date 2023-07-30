@@ -88,17 +88,19 @@ body {
 	transition: background-color, border-radius 0.7s ease;
 }
 
-.menu #traduccion p:hover {
+.menu #traduccion:hover p {
 	color: #CC0101;
 	transition: color 0.7s ease;
 }
 
-.menu #acerca .fa-chevron-up, .menu #traduccion .fa-chevron-up{
+.menu #acerca .fa-chevron-up,
+.menu #traduccion .fa-chevron-up {
 	transform: rotate(0deg);
 	transition: transform 0.7s ease;
 }
 
-.menu #acerca:hover .fa-chevron-up, .menu #traduccion:hover .fa-chevron-up {
+.menu #acerca:hover .fa-chevron-up,
+.menu #traduccion:hover .fa-chevron-up {
 	transform: rotate(180deg);
 	transition: transform 0.7s ease;
 }
@@ -132,9 +134,9 @@ body {
 	display: block;
 }
 
-.text-overlay{
+.text-overlay {
 	position: absolute;
-	top: 0%;
+	top: 40%;
 	/* Ajusta la posición vertical del texto */
 	left: 50%;
 	/* Ajusta la posición horizontal del texto */
@@ -161,6 +163,7 @@ body {
 
 .indexportada figure {
 	height: 250px;
+	width: 300px;
 	border-radius: 18px;
 	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
 	transition: box-shadow 0.7s;
@@ -187,9 +190,13 @@ body {
 
 /*CONTROLAR EN DISPOSITIVOS PEQUEÑOS*/
 
+.splide__track {
+	margin: 40px 0px;
+}
+
 .tours_populares_item {
 	height: 350px;
-	margin: 50px;
+	margin: 0px 50px;
 	border-radius: 18px;
 	background-color: #D9D9D9;
 	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
@@ -245,8 +252,15 @@ body {
 	background-color: white;
 	border-radius: 18px;
 	border: 4px solid #00BD35;
-	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0);
 	font-weight: bold;
+	transition: box-shadow 0.5s;
+}
+
+.tours_populares_button:hover {
+	cursor: pointer;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	transition: box-shadow 0.5s;
 }
 
 /*Footer*/

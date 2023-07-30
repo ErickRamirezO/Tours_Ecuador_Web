@@ -1,9 +1,9 @@
 //Slider
 document.addEventListener('DOMContentLoaded', function() {
 	var splide = new Splide('.splide', {
+		type: 'loop',
 		perPage: 3,
-		focus: 0,
-		omitEnd: true,
+		autoplay: true,
 	});
 
 	splide.mount();
