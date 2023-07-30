@@ -77,12 +77,8 @@ body {
 	border-radius: 15px;
 	background-color: rgba(1, 162, 204, 0.18);
 	cursor: pointer;
-	transition: background-color, border-radius 0.7s ease;
-}
-
-.menu div p:hover {
 	color: #0087a8;
-	transition: color 0.7s ease;
+	transition: background-color, color, border-radius 0.7s ease;
 }
 
 .menu #traduccion:hover {
