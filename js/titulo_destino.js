@@ -4,9 +4,17 @@ document.addEventListener("DOMContentLoaded", function() {
 	anime({
 		targets: '.imagen_a',
 		opacity: [0.5, 1],
-		translateX: [-100, 600],
+		translateX: [250, -250],
 		easing: "easeOutExpo",
-		duration: 2700
+		duration: 2700,
+		complete: function() {
+			anime({
+				targets: '.imagen_a',
+				rotateY: '180deg', 
+				easing: "easeOutExpo",
+				duration: 1000
+			});
+		}
 	});
 	anime({
 		targets: '.letter',

@@ -4,12 +4,9 @@
   top: 0;
 
 }
-
 .cabecera-tours {
   position: static;
 }
-
-
 
 .portada-tours-primero {
   width: 100%;
@@ -19,8 +16,6 @@
   background-size: cover;
   background-attachment: fixed;
   padding-top: 10%;
-
-
 }
 
 .portada-tours-primero p {
