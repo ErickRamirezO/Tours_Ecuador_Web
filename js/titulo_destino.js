@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		complete: function() {
 			anime({
 				targets: '.imagen_a',
-				rotateY: '180deg', 
+				rotateY: '180deg',
 				easing: "easeOutExpo",
 				duration: 1000
 			});
@@ -23,5 +23,31 @@ document.addEventListener("DOMContentLoaded", function() {
 		duration: 600,
 		offset: '-=775',
 		delay: (el, i) => 34 * (i + 1)
+	});
+
+	//Imagenes
+	anime({
+		targets: ".imagenes-portada div",
+		translateY: [-20, 0],
+		opacity: [0, 1],
+		easing: "easeOutExpo",
+		delay: anime.stagger(150),
+	});
+
+	//Tabla de contenido
+	anime({
+		targets: ".table-of-contents li",
+		translateY: [-20, 0],
+		opacity: [0, 1],
+		easing: "easeOutExpo",
+		delay: anime.stagger(150),
+	});
+	anime({
+		targets: ".table-of-contents-sticky",
+		translateX: [-100, 0],
+		opacity: [0, 1],
+		duration: 1800,
+		easing: "easeOutExpo",
+		delay: anime.stagger(150),
 	});
 });
