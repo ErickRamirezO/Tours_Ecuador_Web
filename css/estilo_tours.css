@@ -21,7 +21,8 @@
 
 .portada-tours-primero p {
   font-size: 100px;
-
+  font-weight: bold;
+  color:white;
   text-align: center;
 }
 
@@ -92,13 +93,14 @@ a {
 .paginacion {
   width: 100%;
   height: 100px;
+  margin-bottom: 1%;
 }
 
 .paginacion div {
 
   padding-top: 1%;
-  width: 20%;
-  height: 100%;
+  width: 10%;
+  height: 80%;
   margin: auto;
   display: flex;
 
@@ -107,7 +109,7 @@ a {
 .paginacion-principal div p {
   text-align: center;
   margin: auto;
-  font-size: 40px;
+  font-size: 30px;
 
 }
 
@@ -117,13 +119,14 @@ a {
   background-color: rgba(1, 162, 204, 0.4);
   border-radius: 15px;
   margin: auto;
+  transition: background-color 0.7s ease;
 }
 
 .paginacion-principal div:hover {
   background-color: rgba(1, 162, 204, 0.18);
   cursor: pointer;
   color: #0087a8;
-  transition: background-color, color, border-radius 0.7s ease;
+  transition: background-color, color, 0.7s ease;
 }
 
 
@@ -132,11 +135,12 @@ a {
   height: 100%;
   border-radius: 30px;
   filter: blur(0px);
-  transition: filter 0.7s ease;
+  transform: scale(1);
+  transition: transform, filter, 0.7s ease;
 }
 
 .informacion-tours img:hover {
   filter: blur(2px);
-  transform: rotate(0deg);
-  transition: filter 0.9s ease;
+  transform: scale(1.3);
+  transition: filter, transform, 0.9s ease;
 }
