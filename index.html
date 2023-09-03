@@ -21,17 +21,6 @@ https://cdn.jsdelivr.net/npm/@ciar4n/izmir@1.0.1/izmir.min.css
   <script src="
 https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js
 "></script>
-  <!--i18next-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.4.6/i18next.min.js"
-    integrity="sha512-bhrAOdKozg1WdqpCldqZfQu8XQOTd2tBYD92qByNP1+RUqcsJ+bZKu17On/e6VIPHWNEOxFrtkrcCwya8EHWBg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-xhr-backend/3.2.2/i18nextXHRBackend.min.js"
-    integrity="sha512-MUYO1+VEcFMYb/UEtAGdOArYvDh/yth3ZQwfmdttD9CURHAMzkfCZPRYIbXNCbOQWSjOXjjj5xwjEk/gEMXCdg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/i18next-browser-languagedetector/7.1.0/i18nextBrowserLanguageDetector.min.js"
-    integrity="sha512-n5H7dHP0TYFOVU1STvt0jFosim1IOehCVswCrz83p50BSo9wZgzER4kVxurpgp0S7qHSakfdxPNYbx91au28qA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -46,7 +35,7 @@ https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js
           <p>Inicio</p>
         </div>
         <div id="tours">
-          <p>Tours <i class="fa-solid fa-chevron-down"></i></p>
+          <p>Tours <i class="fa-solid fa-chevron-up"></i></p>
         </div>
         <div id="acerca">
           <p>Acerca de nosotros <i class="fa-solid fa-chevron-up"></i></p>
@@ -55,12 +44,15 @@ https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js
           <p>Contacto</p>
         </div>
         <div id="traduccion">
-          <p>ES <i class="fa-solid fa-chevron-up"></i></p>
+          <label class="switch">
+            <input type="checkbox" id="language-switch">
+            <span class="slider"></span>
+            <span class="language-text">EN</span>
+            <span class="language-text">ES</span>
+          </label>
         </div>
       </div>
     </div>
-    <button id="español_btn">Español</button>
-    <button id="ingles_btn">Inglés</button>
     <div class="portada">
       <div class="encabezado">
         <img src="img/FotoJet.jpg">
@@ -73,8 +65,8 @@ https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js
           <figure class="c4-izmir c4-gradient-bottom c4-image-zoom-in">
             <img src="img/uno.jpg">
             <figcaption class="c4-layout-bottom-center">
-              <div class="c4-fade-up">
-                <h3 class="viaja">Viaja</h3>
+              <div class="c4-fade-up viaja">
+                <h3>Viaja</h3>
               </div>
             </figcaption>
           </figure>
@@ -83,8 +75,8 @@ https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js
           <figure class="c4-izmir c4-gradient-bottom c4-image-zoom-in">
             <img src="img/cinco.jpg">
             <figcaption class="c4-layout-bottom-center">
-              <div class="c4-fade-up">
-                <h3 class="explora">
+              <div class="c4-fade-up explora">
+                <h3>
                   Explora
                 </h3>
               </div>
@@ -95,8 +87,8 @@ https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js
           <figure class="c4-izmir c4-gradient-bottom c4-image-zoom-in">
             <img src="img/dos.jpg">
             <figcaption class="c4-layout-bottom-center">
-              <div class="c4-fade-up">
-                <h3 class="descubre">
+              <div class="c4-fade-up descubre">
+                <h3>
                   Descubre
                 </h3>
               </div>
@@ -221,10 +213,10 @@ https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js
       <div class="footer_arriba">
         <div align="center">
           <img class="logo" src="img/logoToursEcuador.png">
-          <p class="frase_tours_ecuador" style="font-weight: bold;">“Vive y viaja mientras puedas”</p>
+          <p style="font-weight: bold;" class="frase_tours_ecuador">“Vive y viaja mientras puedas”</p>
         </div>
         <div align="center">
-          <p class="siguenos" style="font-weight:bold;">SÍGUENOS</p>
+          <p style="font-weight:bold;" class="siguenos">SÍGUENOS</p>
           <div class="redes_sociales_footer">
             <div>
               <i class="fa-brands fa-instagram"></i>
@@ -253,7 +245,6 @@ https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js
       </div>
     </footer>
   </div>
-  <script src="js/i18next.js"></script>
   <script src="js/translate.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/index.js"></script>
