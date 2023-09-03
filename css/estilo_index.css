@@ -19,6 +19,9 @@ body {
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(20px);
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   position: -webkit-sticky;
   /* Safari */
   position: sticky;
@@ -36,35 +39,19 @@ body {
   width: 50%;
   height: 100%;
   margin-left: 20%;
-
-
 }
 
 .menu {
   width: 90%;
   height: 100%;
   display: flex;
-  padding-top: 1%;
   padding-left: 30%;
-
-
 }
 
-.menu #inicio,
-#tours,
-#traduccion,
-#contacto {
+.menu div {
   width: auto;
   height: 100%;
   margin: auto;
-  padding: 1%;
-  transition: 0.7s;
-}
-
-#acerca {
-  width: auto;
-  margin-left: auto;
-  margin-right: auto;
   padding: 1%;
   transition: 0.7s;
 }
@@ -81,7 +68,7 @@ body {
   color: #0087a8;
   transition: background-color, color, border-radius 0.7s ease;
 }
-
+/*
 .menu #traduccion:hover {
   border-radius: 15px;
   background-color: pink;
@@ -93,17 +80,92 @@ body {
   color: #CC0101;
   transition: color 0.7s ease;
 }
+*/
 
-.menu #acerca .fa-chevron-up,
-.menu #traduccion .fa-chevron-up {
+.menu #tours .fa-chevron-up,
+.menu #acerca .fa-chevron-up{
   transform: rotate(0deg);
-  transition: transform 0.7s ease;
+  transition: transform 0.4s ease;
 }
 
-.menu #acerca:hover .fa-chevron-up,
-.menu #traduccion:hover .fa-chevron-up {
+.menu #tours:hover .fa-chevron-up,
+.menu #acerca:hover .fa-chevron-up {
   transform: rotate(180deg);
-  transition: transform 0.7s ease;
+  transition: transform 0.4s ease;
+}
+
+/*switch para idioma*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    cursor: pointer;
+    margin-left: 20px; /* Ajusta el margen según sea necesario */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #0087a8;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #0087a8;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.language-text {
+    position: absolute;
+    top: 50%;
+    font-size: 14px;
+    color: white;
+    padding: 5px;
+    display: inline-block;
+    transform: translateY(-50%);
+}
+
+.language-text:first-child {
+    left: 4px;
+}
+
+.language-text:last-child {
+    right: 4px;
 }
 
 /********************/
@@ -197,7 +259,7 @@ body {
 
 .tours_populares_item {
   height: 350px;
-  margin: 0px 50px;
+  margin: 10px 50px;
   border-radius: 18px;
   background-color: #D9D9D9;
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
